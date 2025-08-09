@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from "next/link";  // <-- add this
 import styles from "../styles/header.module.css";
 
 export default function Header() {
@@ -10,10 +11,18 @@ export default function Header() {
 
       {/* Desktop Nav */}
       <nav className={`${styles.nav} ${menuOpen ? styles.showMenu : ""}`}>
-        <a href="/">Home</a>
-        <a href="/products">Products</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
+        <Link href="/">
+          <a>Home</a>
+        </Link>
+        <Link href="/products">
+          <a>Products</a>
+        </Link>
+        <Link href="/about">
+          <a>About</a>
+        </Link>
+        <Link href="/contact">
+          <a>Contact</a>
+        </Link>
       </nav>
 
       {/* Hamburger Menu */}
